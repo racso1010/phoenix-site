@@ -30,9 +30,9 @@ function custom_enqueue_styles() {
 		wp_enqueue_script('parallax', get_stylesheet_directory_uri() . '/js/parallax.js', [], 1.0, true);
 		wp_enqueue_script('animation-frame', get_stylesheet_directory_uri() . '/js/requestAnimationFrame.js', [], 1.0, true);
 		wp_enqueue_script('jq-parallax', get_stylesheet_directory_uri() . '/js/jquery.parallax.js', [], 1.0, true);
-		wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', [], 1.0, true);
 	}
 
+	wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', [], 1.0, true);
 	wp_register_script('custom_script', get_stylesheet_directory_uri(). '/js/price-woocommerce.js', array(), '1', true );
   wp_enqueue_script('custom_script');
 }
@@ -188,44 +188,50 @@ function phoenix_separate_registration_form() {
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="reg_billing_first_name"><?php _e( 'First name', 'woocommerce' ); ?></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" />
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) esc_attr_e( $_POST['billing_first_name'] ); ?>" placeholder="<?php _e( 'First name', 'woocommerce' ); ?>"/>
 			</p>
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="reg_billing_last_name"><?php _e( 'Last name', 'woocommerce' ); ?></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" />
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if ( ! empty( $_POST['billing_last_name'] ) ) esc_attr_e( $_POST['billing_last_name'] ); ?>" placeholder="<?php _e( 'Last name', 'woocommerce' ); ?>"/>
 			</p>
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="reg_billing_address_1"><?php _e( 'Address', 'woocommerce' ); ?></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php if ( ! empty( $_POST['billing_address_1'] ) ) esc_attr_e( $_POST['billing_address_1'] ); ?>" />
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php if ( ! empty( $_POST['billing_address_1'] ) ) esc_attr_e( $_POST['billing_address_1'] ); ?>" placeholder="<?php _e( 'Address', 'woocommerce' ); ?>"/>
 			</p>
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="reg_billing_state"><?php _e( 'State', 'woocommerce' ); ?></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_state" id="reg_billing_state" value="<?php if ( ! empty( $_POST['billing_state'] ) ) esc_attr_e( $_POST['billing_state'] ); ?>" />
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_state" id="reg_billing_state" value="<?php if ( ! empty( $_POST['billing_state'] ) ) esc_attr_e( $_POST['billing_state'] ); ?>" placeholder="<?php _e( 'State', 'woocommerce' ); ?>" />
 			</p>
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;</label>
-				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" placeholder="<?php _e( 'Email', 'woocommerce' ); ?>"/><?php // @codingStandardsIgnoreLine ?>
 			</p>
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
        <label for="reg_billing_phone"><?php _e( 'Phone', 'woocommerce' ); ?></label>
-       <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e( $_POST['billing_phone'] ); ?>" />
+       <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e( $_POST['billing_phone'] ); ?>" placeholder="<?php _e( '(###)###-#####', 'woocommerce' ); ?>"/>
 			</p>
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-       <label for="reg_billing_company"><?php _e( 'Company', 'woocommerce' ); ?><small><?php _e(' (If Applicable)') ?></small></label>
-       <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_company" id="reg_billing_company" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" />
+       <label for="reg_billing_company"><?php _e( 'Company Name', 'woocommerce' ); ?><small><?php _e(' (If Applicable)') ?></small></label>
+       <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_company" id="reg_billing_company" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" placeholder="<?php _e( 'Company', 'woocommerce' ); ?>" />
 			</p>
+			
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+       <label for="reg_billing_reseller_lic"><?php _e( 'Reseller Licence', 'woocommerce' ); ?><small><?php _e(' (If Applicable)') ?></small></label>
+       <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_reseller_lic" id="reg_billing_reseller_lic" value="<?php esc_attr_e( $_POST['billing_company'] ); ?>" placeholder="<?php _e( 'Reseller Licence', 'woocommerce' ); ?>"/>
+			</p>
+			
 			
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;</label>
-					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
+					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" placeholder="<?php _e( 'Password', 'woocommerce' ); ?>"/>
 				</p>
 
 			<?php else : ?>
@@ -269,6 +275,10 @@ function wooc_save_extra_register_fields( $customer_id ) {
 		// Phone input filed which is used in WooCommerce
 		update_user_meta( $customer_id, 'billing_company', sanitize_text_field( $_POST['billing_company'] ) );
 	}
+	if ( isset( $_POST['billing_reseller_lic'] ) ) {
+		// Phone input filed which is used in WooCommerce
+		update_user_meta( $customer_id, 'billing_reseller_lic', sanitize_text_field( $_POST['billing_reseller_lic'] ) );
+	}
 	if ( isset( $_POST['billing_state'] ) ) {
 		// Phone input filed which is used in WooCommerce
 		update_user_meta( $customer_id, 'billing_state', sanitize_text_field( $_POST['billing_state'] ) );
@@ -287,3 +297,51 @@ function wooc_save_extra_register_fields( $customer_id ) {
 	}
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
+
+add_filter( 'woocommerce_default_address_fields', 'phoenix_dashboard_add_field' );
+function phoenix_dashboard_add_field( $fields ) {
+ 
+	$fields['billing_reseller_lic']   = array(
+		'label'        => 'Reseller Licence',
+		'required'     => true,
+		'class'        => array( 'form-row-wide', 'my-custom-class' ),
+		'priority'     => 20,
+		'placeholder'  => 'Resellers Licence',
+	);
+ 
+	return $fields;
+ 
+}
+add_filter( 'woocommerce_customer_meta_fields', 'phoenix_admin_address_field' );
+ 
+function phoenix_admin_address_field( $admin_fields ) {
+ 
+	$admin_fields['billing']['fields']['billing_reseller_lic'] = array(
+		'label' => 'Reseller Licence',
+		'description' => 'User reseller licence',
+	);
+ 
+	// or $admin_fields['shipping']['fields']['shipping_fav_color']
+	// or both
+ 
+	return $admin_fields;
+
+}
+
+// function woocommerce_edit_my_account_page() {
+// 	return apply_filters( 'woocommerce_forms_field', array(
+// 			'woocommerce_my_account_page' => array(
+// 					'type'        => 'text',
+// 					'label'       => __( 'Socail Media Profile Link', ' cloudways' ),
+// 					'placeholder' => __( 'Profile Link', 'cloudways' ),
+// 					'required'    => false,
+// 			),
+// 	) );
+// }
+// function edit_my_account_page_woocommerce() {
+// 	$fields = woocommerce_edit_my_account_page();
+// 	foreach ( $fields as $key => $field_args ) {
+// 			woocommerce_form_field( $key, $field_args );
+// 	}
+// }
+// add_action( 'woocommerce_register_form', 'edit_my_account_page_woocommerce', 15 );
