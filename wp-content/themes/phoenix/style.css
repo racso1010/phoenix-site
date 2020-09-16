@@ -1,0 +1,214 @@
+/*
+Theme Name:   Phoenix
+Theme URI:    
+Description:  Child theme para modificaciones varias
+Author:       
+Author URI:   
+Template:     wp-bootstrap-starter
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  phoenix
+*/
+header#masthead {
+	box-shadow: none;
+}
+.content-area.col-sm-12 {
+	padding: 0px;
+} 
+.page-content, .entry-content, .entry-summary {
+	margin-top: 0px !important;
+}
+#content.site-content-fluid {
+	padding: 0px !important;
+}
+/**** paralax ****/
+
+.scene {
+	padding: 0px;
+	overflow: hidden;
+}
+
+.layer{
+width: 100%;
+}
+.galaxy {
+	position: relative;
+	display:block;
+	top: 0px;
+	left: 0px;
+}
+.molecules {
+	position: absolute;
+	display: block;
+	top: 0px;
+	text-align: center;
+}
+.bird, .phoenix, .ashes, .bokeh1, .bokeh2 {
+	position: absolute;
+	display: block;
+	left: 0px;
+	top: 0px;
+	text-align: center;
+}
+.clouds {
+	position: absolute;
+	display: block;
+	left: 0px;
+}
+.bird img, .ashes h1, .phoenix img, .molecules img{
+	position: relative;
+    margin: 0 auto;
+}
+.img {
+	max-width: 100%;
+	height: auto;
+}
+.molecules img{
+	display: block;
+	margin: 0 auto;
+	width: 75%;
+  top: 25%;
+}
+.ashes h1  {
+	position: relative;
+  margin: 0 auto;
+	width: 80%;
+	top: 15%;
+  font-size: 2rem;
+	color: #f8f6ec;
+}
+
+.bird img  {
+	width: 52em;
+  top: 25%;
+}
+.phoenix img  {
+	width: 52em;
+    top: 45%;
+}
+
+.bokeh1 img {
+	position: relative;
+    right: -70%;
+    top: 40%;
+}
+.bokeh img {
+		display: block;
+    position: absolute;
+    right: 60%;
+    top: 10%;
+}
+
+/* Navbar */
+.navbar-custom .navbar-brand {
+	font-weight: 700;
+}
+.navbar-custom .navbar-brand:focus {
+	outline: 0;
+}
+
+.logo-height {
+max-height: 50px;
+}
+
+
+.logo-max-height {
+max-height: 30px !important;
+margin-top: -5px;
+}
+
+
+.navbar-custom .navbar-brand .navbar-toggle {
+	padding: 4px 6px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+	outline: 0;
+}
+.navbar-custom a {
+	color: #000000;
+}
+.navbar-custom a:hover {
+color: #91daf0;
+
+}
+
+
+
+.navbar-custom .nav li.active {
+	outline: none;
+	color: #7b7b7b;
+}
+
+.navbar-custom .nav li a {
+background: none;
+	-webkit-transition: background .3s ease-in-out;
+	-moz-transition: background .3s ease-in-out;
+	transition: background .3s ease-in-out;
+
+	color: #ffffff;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a.active {
+	outline: 0;
+	background-color: none ;
+	color: #7b7b7b;
+}
+
+/*	Dropdown	*/
+.dropdown-menu {
+background-color: #1c1928;
+border-color: #303030;
+padding: 15px 0;
+}
+
+.navbar-custom .navbar-nav>.open>a,
+.navbar-custom .navbar-nav>.open>a:focus,
+.navbar-custom .navbar-nav>.open>a:hover {
+background: none;
+}
+
+.navbar {
+	padding: 20px 0;
+	border-bottom: 0;
+	letter-spacing: 1px;
+	background: 0 0;
+	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+.top-nav-collapse {
+	padding: 5px !important;
+	background-color: #1c1928 !important;
+}
+.navbar-custom.top-nav-collapse {
+	border-bottom: 1px solid #303030;
+}
+.login-home {
+	color: white;
+	font-size: 14px;
+}
+.login-home a {
+	color: #91daf0 !important;
+	text-decoration: none !important;
+}
+
+
+/**
+* Woocommerce price 
+*/
+
+.woocommerce div.product p.price {
+	color: white;
+}
+
+.custom-price > span.woocommerce-Price-amount {
+	display: none;
+}

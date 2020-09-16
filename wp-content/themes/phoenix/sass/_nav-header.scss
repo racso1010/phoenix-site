@@ -1,0 +1,60 @@
+header#masthead {
+    background-color: transparent;
+}
+
+.navbar {
+    .navbar-brand {
+        .logo-height {
+            width: 225px;
+            margin-right: 40px;
+        }
+    }
+
+    #main-nav {
+        .navbar-nav {
+            width: 80%;
+
+            .menu-item {
+                .nav-link {
+                    font-family: $font_montserrat;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $white;
+                    padding-left: 15px;
+                    padding-right: 15px;   
+
+                }
+                
+                .nav-link:hover {
+                    color: $link_hover;
+                }
+            }
+        }
+    }
+
+    .navbar-right {
+        li {
+            a {
+                text-transform: capitalize;
+                color: $white !important;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            a:hover {
+                color: $link_hover !important;
+                background: none;
+                font-weight: 500 !important;
+            }
+        }
+        li.logout_text {
+           a {
+                font-size: 11px !important;
+           }
+        }
+    }
+}
+
+#content.site-content {
+    padding-top: 6rem;
+}

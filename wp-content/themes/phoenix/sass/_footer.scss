@@ -1,0 +1,94 @@
+#footer-widget {
+    .widget-title {
+        font-family: $font_harabara !important;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: .15em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: $white;
+    } 
+
+    .col-widget {
+        ul {
+            li {
+                line-height: 21px;
+
+                a {
+                    color: $link_footer;
+                    font-size: 12px;
+                    padding: 0;
+                }
+
+                a:hover {
+                    background-color: transparent;
+                    color: $link_footer_hover;
+                }
+            }
+        }
+
+        .form-mc {
+            display: flex;
+            .form-group {
+                margin-right: 4px;
+                input {
+                    font-size: 12px;
+                    padding: 6px 12px;
+                    height: 34px;
+                    border: 1px solid #ccc;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                }
+                input:focus {
+                    border-color: #66afe9;
+                    outline: 0;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+                }
+            }
+
+            .buttom-mc {
+                input {
+                    font-size: 11px;
+                    padding: 7px;
+                    color: $white;
+                    background: #24202a;
+                    border: 2px solid $white;
+                    border-radius: 0px;
+                    text-transform: uppercase;
+                    transition: .3s;
+                }
+                input:hover, 
+                input:focus, 
+                input.focus {
+                    color: #24202a;
+                    background: #fafafa;
+                    border: 2px solid #fafafa;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .custom-border {
+            color: #C3C3C3;
+            text-transform: none;
+            border: 1px solid #2F2F2F;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 1.4;
+            font-family: $font_roboto;
+        }
+    }
+}
+
+.site-footer {
+    .site-info {
+        color: $white;
+        font-family: $font_roboto;
+    } 
+}

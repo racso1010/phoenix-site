@@ -1,0 +1,24 @@
+$font_montserrat:           'Montserrat',"Helvetica Neue",Helvetica,Arial,sans-serif;
+$font_roboto:               'Roboto', sans-serif;
+$font_harabara:             'harabara_maisharabaramaisdemo', sans-serif;
+
+
+$link_hover:#7b7b7b;
+$white: #fff;
+$black: #000;
+$link_footer: #91daf0;
+$link_footer_hover: #289abc;
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: $font_harabara;
+}
+
+
+@import 'nav-header';
+@import 'footer';
+@import 'button';
+@import 'woocommerce';
+@import 'content';
+@import 'contact-form';
+@import 'toggle';
