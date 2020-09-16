@@ -208,7 +208,3 @@ background: none;
 .woocommerce div.product p.price {
 	color: white;
 }
-
-.custom-price > span.woocommerce-Price-amount {
-	display: none;
-}

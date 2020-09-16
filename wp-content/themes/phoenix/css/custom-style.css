@@ -186,7 +186,7 @@ header#masthead {
     text-decoration: none; }
 .custom-woocommerce-sumary .custom-price {
   margin: 3rem 0; }
-  .custom-woocommerce-sumary .custom-price .woocommerce-Price-amount {
+  .custom-woocommerce-sumary .custom-price span {
     color: #fff;
     font-size: 24px;
     font-weight: 400; }
