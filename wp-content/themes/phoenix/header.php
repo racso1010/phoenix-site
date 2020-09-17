@@ -72,7 +72,7 @@
     <?php elseif(is_shop()) : ?>
         <div id="content" class="site-content">
             <div class="container-fluid p-0">
-                <?php echo do_shortcode('[metaslider id="272"]'); ?>
+                <?php echo do_shortcode('[metaslider id="297"]'); ?>
             </div>
         </div>
         <div id="content" class="site-content-fluid">
