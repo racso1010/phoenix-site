@@ -99,15 +99,15 @@ function parallax_homepage($atts) {
     ob_start(); ?>
     
     <ul id="scene" class="scene" style="position:relative;">
-        <li class="layer galaxy" data-depth="0.00"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/background.jpg" alt=""></li>
-        <li class="layer bokeh" id="b2" data-depth="0.05"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/bokeh2.png" alt=""></li> 
-        <li class="layer bokeh1" id="b1" data-depth="0.03"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/bokeh1.png" alt=""></li>
-        <li class="layer molecules" data-depth="0.10"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/molecule_back.png" alt=""></li>
-        <li class="layer molecules" id="m2" data-depth="0.10"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/molecule_front.png" alt=""></li>
-        <li class="layer bird" data-depth="0.6"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/bird.png" alt=""></li>
-        <li class="layer phoenix" data-depth="0.1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/Logotype.png" alt=""></li>
+        <li class="layer galaxy" data-depth="0.00"></li>
+        <li class="layer bokeh" id="b2" data-depth="0.05"><img src="http://phoenix.local/wp-content/uploads/2020/09/bokeh2.png" alt=""></li> 
+        <li class="layer bokeh1" id="b1" data-depth="0.03"><img src="http://phoenix.local/wp-content/uploads/2020/09/bokeh1.png" alt=""></li>
+        <li class="layer molecules" data-depth="0.10"><img src="http://phoenix.local/wp-content/uploads/2020/09/molecule_back.png" alt=""></li>
+        <li class="layer molecules" id="m2" data-depth="0.10"><img src="http://phoenix.local/wp-content/uploads/2020/09/molecule_front.png" alt=""></li>
+        <li class="layer bird" data-depth="0.6"><img src="http://phoenix.local/wp-content/uploads/2020/09/bird.png" alt=""></li>
+        <li class="layer phoenix" data-depth="0.1"><img src="http://phoenix.local/wp-content/uploads/2020/09/Logotype.png" alt=""></li>
         <li class="layer ashes" data-depth="0.1"><h1><?php echo $atts['title'] ?></h1></li>
-        <li class="clouds" data-depth="0.0"><img src="<?php echo get_stylesheet_directory_uri(); ?>/ph-images/clouds.png" alt=""></li>
+        <li class="clouds" data-depth="0.0"><img src="http://phoenix.local/wp-content/uploads/2020/09/clouds.png" alt=""></li>
 		</ul>
 		
 		<?php return ob_get_clean();
@@ -345,3 +345,21 @@ function phoenix_admin_address_field( $admin_fields ) {
 // 	}
 // }
 // add_action( 'woocommerce_register_form', 'edit_my_account_page_woocommerce', 15 );
+
+
+
+
+// Woocommerce - Show all products in one page
+
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+
+function new_loop_shop_per_page( $cols ) {
+	// $cols contains the current number of products per page based on the value stored on Options –> Reading
+	// Return the number of products you wanna show per page.
+	$cols = 30;
+	return $cols;
+}
+
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );

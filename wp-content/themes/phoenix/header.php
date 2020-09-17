@@ -49,26 +49,40 @@
 
                 <?php
                 wp_nav_menu(array(
-                'theme_location'    => 'primary',
-                'container'       => 'div',
-                'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse',
-                'menu_id'         => false,
-                'menu_class'      => 'navbar-nav justify-content-around',
-                'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
+                    'theme_location'    => 'primary',
+                    'container'       => 'div',
+                    'container_id'    => 'main-nav',
+                    'container_class' => 'collapse navbar-collapse',
+                    'menu_id'         => false,
+                    'menu_class'      => 'navbar-nav justify-content-around',
+                    'depth'           => 3,
+                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                    'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
                 
-                <ul class="nav navbar-nav navbar-right">
+                <?php
+                wp_nav_menu(array(
+                    'menu'  =>  !is_user_logged_in() ? 'Account No login' : 'Account Logged',
+                    'container'       => 'div',
+                    'container_id'    => 'main-nav',
+                    'container_class' => 'collapse navbar-collapse',
+                    'menu_id'         => false,
+                    'menu_class'      => 'navbar-nav justify-content-around',
+                    'depth'           => 3,
+                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                    'walker'          => new wp_bootstrap_navwalker()
+
+                ));
+                ?>
+                <!-- <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="/"><i title="login" class="fa fa-user"></i>admin</a>
                     </li>
                     <li class="logout_text">
                         <a href="/">(logout)</a>
                     </li>
-                </ul>
+                </ul> -->
 
             </nav>
         </div>

@@ -36,9 +36,18 @@ width: 100%;
 .galaxy {
 	position: relative;
 	display:block;
+	background-image: url('http://phoenix.local/wp-content/uploads/2020/09/background.png');
+	background-size: cover;
+	background-position: center;
 	top: 0px;
 	left: 0px;
 }
+
+.galaxy img {
+	background-size: cover;
+	background-position: center;
+}
+
 .molecules {
 	position: absolute;
 	display: block;
@@ -205,6 +214,7 @@ background: none;
 * Woocommerce price 
 */
 
-.woocommerce div.product p.price {
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
 	color: white;
 }

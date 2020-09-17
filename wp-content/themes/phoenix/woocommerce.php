@@ -14,9 +14,9 @@
 
 get_header(); ?>
 
-    <section id="primary" class="content-area col-sm-12 col-md-12 col-lg-12">
+    <section id="primary" class="content-area col-sm-12 col-md-12 col-lg-12 woocommerce-store">
         <main id="main" class="site-main" role="main">
-
+    
             <?php woocommerce_content(); ?>
 
         </main><!-- #main -->
