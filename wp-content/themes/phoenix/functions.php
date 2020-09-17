@@ -103,14 +103,14 @@ function parallax_homepage($atts) {
     
     <ul id="scene" class="scene" style="position:relative;">
         <li class="layer galaxy" data-depth="0.00"></li>
-        <li class="layer bokeh" id="b2" data-depth="0.05"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/bokeh2.png" alt=""></li> 
-        <li class="layer bokeh1" id="b1" data-depth="0.03"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/bokeh1.png" alt=""></li>
-        <li class="layer molecules" data-depth="0.10"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/molecule_back.png" alt=""></li>
-        <li class="layer molecules" id="m2" data-depth="0.10"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/molecule_front.png" alt=""></li>
-        <li class="layer bird" data-depth="0.6"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/bird.png" alt=""></li>
-        <li class="layer phoenix" data-depth="0.1"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/Logotype.png" alt=""></li>
+        <li class="layer bokeh" id="b2" data-depth="0.05"><img src="/wp-content/uploads/2020/09/bokeh2.png" alt=""></li> 
+        <li class="layer bokeh1" id="b1" data-depth="0.03"><img src="/wp-content/uploads/2020/09/bokeh1.png" alt=""></li>
+        <li class="layer molecules" data-depth="0.10"><img src="/wp-content/uploads/2020/09/molecule_back.png" alt=""></li>
+        <li class="layer molecules" id="m2" data-depth="0.10"><img src="/wp-content/uploads/2020/09/molecule_front.png" alt=""></li>
+        <li class="layer bird" data-depth="0.6"><img src="/wp-content/uploads/2020/09/bird.png" alt=""></li>
+        <li class="layer phoenix" data-depth="0.1"><img src="/wp-content/uploads/2020/09/Logotype.png" alt=""></li>
         <li class="layer ashes" data-depth="0.1"><h1><?php echo $atts['title'] ?></h1></li>
-        <li class="clouds" data-depth="0.0"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/clouds.png" alt=""></li>
+        <li class="clouds" data-depth="0.0"><img src="/wp-content/uploads/2020/09/clouds.png" alt=""></li>
 		</ul>
 		
 		<?php return ob_get_clean();
