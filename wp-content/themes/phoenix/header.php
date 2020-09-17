@@ -32,7 +32,7 @@
                 </style>
             <?php } ?>
         <div class="container">
-            <nav class="navbar navbar-expand-xl p-0">
+            <nav class="navbar navbar-expand-xl">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -44,45 +44,22 @@
 
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="fas fa-bars"></span>
                 </button>
 
                 <?php
                 wp_nav_menu(array(
-                    'theme_location'    => 'primary',
+                    'theme_location'    => !is_user_logged_in() ? 'primary' : 'secondary',
                     'container'       => 'div',
                     'container_id'    => 'main-nav',
                     'container_class' => 'collapse navbar-collapse',
                     'menu_id'         => false,
-                    'menu_class'      => 'navbar-nav justify-content-around',
+                    'menu_class'      => 'navbar-nav',
                     'depth'           => 3,
                     'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                     'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
-                
-                <?php
-                wp_nav_menu(array(
-                    'menu'  =>  !is_user_logged_in() ? 'Account No login' : 'Account Logged',
-                    'container'       => 'div',
-                    'container_id'    => 'main-nav',
-                    'container_class' => 'collapse navbar-collapse',
-                    'menu_id'         => false,
-                    'menu_class'      => 'navbar-nav justify-content-around',
-                    'depth'           => 3,
-                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                    'walker'          => new wp_bootstrap_navwalker()
-
-                ));
-                ?>
-                <!-- <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/"><i title="login" class="fa fa-user"></i>admin</a>
-                    </li>
-                    <li class="logout_text">
-                        <a href="/">(logout)</a>
-                    </li>
-                </ul> -->
 
             </nav>
         </div>
@@ -95,5 +72,5 @@
 	<div id="content" class="site-content">
 		<div class="container">
         <?php endif; ?>
-			<div class="row">
                 <?php endif; ?>
+			<div class="row">

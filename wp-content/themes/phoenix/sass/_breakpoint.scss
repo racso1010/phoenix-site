@@ -1,0 +1,40 @@
+$breakpoint-desktop: 1200px;
+
+@media (min-width: $breakpoint-desktop) {
+  header#masthead {
+    background-color: transparent;
+  }
+  #main-nav {
+    .navbar-nav {
+        .menu-item {
+            &:nth-last-child(2) {
+              margin-left: auto;
+            }
+        }
+        width: 100%;
+        .menu-item {
+            .nav-link {
+                font-family: $font_montserrat;
+                font-size: 14px !important;
+                text-transform: uppercase;
+                color: $white;
+                padding: 15px 10px !important;  
+            }
+
+            .dropdown-item {
+              font-family: $font_montserrat;
+              font-size: 14px !important;
+              text-transform: uppercase;
+              color: $white;
+              padding: 5px 10px !important; 
+            }
+
+            .dropdown-menu {
+              background-color: $phoenix;
+              padding: .5rem;
+              min-width: 18rem;
+            }
+        }
+    }
+  }
+}

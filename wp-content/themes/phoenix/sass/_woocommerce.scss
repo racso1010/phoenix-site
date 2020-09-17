@@ -75,14 +75,14 @@
             width: 15rem;
             font-size: 14px;
             color: $white !important;
-            background-color: #24202a !important;
+            background-color: $phoenix !important;
             border: 2px solid $white;
             border-radius: 0px;
             text-transform: uppercase;
             transition: .3s;
 
             &:hover {
-                color: #24202a !important;
+                color: $phoenix !important;
                 background-color: #fafafa !important;
                 border: 2px solid #fafafa;
                 text-decoration: none;
@@ -126,7 +126,7 @@
         
         span.price {
             display: flex;
-            flex-direction: column-reverse;;
+            flex-direction: column-reverse;
             span {
                 font-size: 24px;
                 font-weight: 700;
@@ -149,13 +149,32 @@
     }
 }
 
-.woocommerce-form-register {
+#customer_login {
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+        color: $white;
+    }
+}
+
+.woocommerce-form-register, .woocommerce-form-login {
+    border: none !important;
+    margin: 0 !important;
+
     label {
         display: inline-block;
         max-width: 100%;
         margin-bottom: 5px;
         font-weight: 700;
         color: #C3C0C3;
+    }
+    .password-input {
+        width: 100%;
+    }
+
+    .woocommerce-form-login__rememberme {
+        width: 100%;
     }
 }
 
@@ -196,16 +215,16 @@
             margin-top: 1em;
             font-size: 14px;
             color: $white !important;
-            background: #24202a;
+            background: $phoenix;
             border: 2px solid $white;
             border-radius: 0px;
             text-transform: uppercase;
             transition: .3s;
 
             &:hover {
-            color: #24202a !important;
+            color: $phoenix !important;
             background-color: $white !important;
-            border: 2px solid #24202a;
+            border: 2px solid $phoenix;
             }
         }
 

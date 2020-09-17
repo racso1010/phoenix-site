@@ -2,22 +2,35 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "harabara_maisharabaramaisdemo", sans-serif; }
 
 header#masthead {
-  background-color: transparent; }
+  background-color: #24202a;
+  padding: 0px !important; }
 
+.navbar .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0); }
+  .navbar .navbar-toggler span {
+    color: #fff; }
 .navbar .navbar-brand .logo-height {
-  width: 225px;
-  margin-right: 40px; }
+  max-height: 35px; }
 .navbar #main-nav .navbar-nav {
-  width: 80%; }
-  .navbar #main-nav .navbar-nav .menu-item .nav-link {
+  width: 100%; }
+  .navbar #main-nav .navbar-nav .menu-item .nav-link, .navbar #main-nav .navbar-nav .menu-item .dropdown-item {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     color: #fff;
-    padding-left: 15px;
-    padding-right: 15px; }
-  .navbar #main-nav .navbar-nav .menu-item .nav-link:hover {
-    color: #7b7b7b; }
+    padding: 10px 5px;
+    font-weight: normal; }
+    .navbar #main-nav .navbar-nav .menu-item .nav-link:hover, .navbar #main-nav .navbar-nav .menu-item .dropdown-item:hover {
+      color: #7b7b7b; }
+  .navbar #main-nav .navbar-nav > li:nth-last-child(2) a:before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    font-weight: 900;
+    content: '\f007 '; }
+  .navbar #main-nav .navbar-nav a[title*="CART"] {
+    font-size: 12px;
+    font-weight: 900;
+    content: '\f07a '; }
 .navbar .navbar-right li a {
   text-transform: capitalize;
   color: #fff !important; }
@@ -117,19 +130,19 @@ header#masthead {
     background-color: #fff !important;
     border: 2px solid #24202a; }
 
-.wpcf7 .wpcf7-submit, button.woocommerce-form-register__submit {
+.wpcf7 .wpcf7-submit, button.woocommerce-form-register__submit, .woocommerce-form-login__submit {
   margin-top: 30px;
   font-size: 14px;
-  padding: 7px 70px;
+  padding: 7px 70px !important;
   color: #fff !important;
-  background: #24202a;
-  border: 2px solid #fff;
+  background: #24202a !important;
+  border: 2px solid #fff !important;
   border-radius: 0px;
   text-transform: uppercase;
   transition: .3s; }
-  .wpcf7 .wpcf7-submit:hover, button.woocommerce-form-register__submit:hover {
+  .wpcf7 .wpcf7-submit:hover, button.woocommerce-form-register__submit:hover, .woocommerce-form-login__submit:hover {
     color: #24202a !important;
-    background: #fff;
+    background: #fff !important;
     border: 2px solid #24202a; }
 
 .custom-woocommerce-image ol.flex-control-thumbs {
@@ -221,12 +234,25 @@ header#masthead {
           content: "Compare at:  ";
           color: #fff; }
 
-.woocommerce-form-register label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-weight: 700;
-  color: #C3C0C3; }
+#customer_login h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff; }
+
+.woocommerce-form-register, .woocommerce-form-login {
+  border: none !important;
+  margin: 0 !important; }
+  .woocommerce-form-register label, .woocommerce-form-login label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #C3C0C3; }
+  .woocommerce-form-register .password-input, .woocommerce-form-login .password-input {
+    width: 100%; }
+  .woocommerce-form-register .woocommerce-form-login__rememberme, .woocommerce-form-login .woocommerce-form-login__rememberme {
+    width: 100%; }
 
 .woocommerce-store .woocommerce-result-count,
 .woocommerce-store .woocommerce-ordering,
@@ -283,6 +309,13 @@ p, span {
 .register-p {
   margin-right: 100px !important; }
 
+p > a {
+  color: #91daf0 !important;
+  text-decoration: none; }
+  p > a:hover {
+    color: #289abc !important;
+    text-decoration: underline; }
+
 .contact-form label {
   display: inline-block;
   width: 100%;
@@ -315,3 +348,28 @@ p, span {
     color: #23527c;
     text-decoration: none !important;
     color: #23527c; }
+
+@media (min-width: 1200px) {
+  header#masthead {
+    background-color: transparent; }
+
+  #main-nav .navbar-nav {
+    width: 100%; }
+    #main-nav .navbar-nav .menu-item:nth-last-child(2) {
+      margin-left: auto; }
+    #main-nav .navbar-nav .menu-item .nav-link {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px !important;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 15px 10px !important; }
+    #main-nav .navbar-nav .menu-item .dropdown-item {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px !important;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 5px 10px !important; }
+    #main-nav .navbar-nav .menu-item .dropdown-menu {
+      background-color: #24202a;
+      padding: .5rem;
+      min-width: 18rem; } }

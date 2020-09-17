@@ -8,6 +8,7 @@ $white: #fff;
 $black: #000;
 $link_footer: #91daf0;
 $link_footer_hover: #289abc;
+$phoenix: #24202a;
 
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -22,3 +23,4 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 @import 'content';
 @import 'contact-form';
 @import 'toggle';
+@import 'breakpoint';

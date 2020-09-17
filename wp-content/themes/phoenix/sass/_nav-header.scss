@@ -1,33 +1,51 @@
 header#masthead {
-    background-color: transparent;
+    background-color: $phoenix;
+    padding: 0px !important;
 }
 
 .navbar {
+    .navbar-toggler {
+        span {
+            color: $white;
+        }
+        border-color: rgba(0,0,0,0);
+    }
     .navbar-brand {
         .logo-height {
-            width: 225px;
-            margin-right: 40px;
+            max-height: 35px;
         }
     }
 
     #main-nav {
         .navbar-nav {
-            width: 80%;
-
+            width: 100%;
             .menu-item {
-                .nav-link {
+                .nav-link, .dropdown-item {
                     font-family: $font_montserrat;
-                    font-size: 14px;
+                    font-size: 12px;
                     text-transform: uppercase;
                     color: $white;
-                    padding-left: 15px;
-                    padding-right: 15px;   
+                    padding: 10px 5px;  
+                    font-weight: normal;
 
+                    &:hover {
+                        color: $link_hover;
+                    }
                 }
-                
-                .nav-link:hover {
-                    color: $link_hover;
+            }
+            &>li:nth-last-child(2) {
+                a:before {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-size: 12px;
+                    font-weight: 900; 
+                    content: '\f007 ';
                 }
+            }
+
+            a[title*="CART"] {
+                font-size: 12px;
+                font-weight: 900; 
+                content: '\f07a ';
             }
         }
     }

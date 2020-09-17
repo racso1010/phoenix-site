@@ -19,11 +19,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_styles_child_theme' );
 function custom_enqueue_styles() {
 
 	//Styles
-    wp_enqueue_style( 'custom-style', 
-    get_stylesheet_directory_uri() . '/css/custom-style.css', 
-    array(), 
-    wp_get_theme()->get('Version')
-);
+    wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/css/custom-style.css', array(), wp_get_theme()->get('Version'));
 
 	//Scripts
 	if(is_front_page()) {
@@ -39,6 +35,13 @@ function custom_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'custom_enqueue_styles');
 
+
+function phoenix_menus() {
+	register_nav_menus( array(
+		'secondary' => esc_html__( 'Secondary', 'wp-bootstrap-starter' ),
+	) );
+}
+add_action( 'after_setup_theme', 'phoenix_menus' );
 
 /**
  * Remove default widgets footer
@@ -100,14 +103,14 @@ function parallax_homepage($atts) {
     
     <ul id="scene" class="scene" style="position:relative;">
         <li class="layer galaxy" data-depth="0.00"></li>
-        <li class="layer bokeh" id="b2" data-depth="0.05"><img src="http://phoenix.local/wp-content/uploads/2020/09/bokeh2.png" alt=""></li> 
-        <li class="layer bokeh1" id="b1" data-depth="0.03"><img src="http://phoenix.local/wp-content/uploads/2020/09/bokeh1.png" alt=""></li>
-        <li class="layer molecules" data-depth="0.10"><img src="http://phoenix.local/wp-content/uploads/2020/09/molecule_back.png" alt=""></li>
-        <li class="layer molecules" id="m2" data-depth="0.10"><img src="http://phoenix.local/wp-content/uploads/2020/09/molecule_front.png" alt=""></li>
-        <li class="layer bird" data-depth="0.6"><img src="http://phoenix.local/wp-content/uploads/2020/09/bird.png" alt=""></li>
-        <li class="layer phoenix" data-depth="0.1"><img src="http://phoenix.local/wp-content/uploads/2020/09/Logotype.png" alt=""></li>
+        <li class="layer bokeh" id="b2" data-depth="0.05"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/bokeh2.png" alt=""></li> 
+        <li class="layer bokeh1" id="b1" data-depth="0.03"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/bokeh1.png" alt=""></li>
+        <li class="layer molecules" data-depth="0.10"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/molecule_back.png" alt=""></li>
+        <li class="layer molecules" id="m2" data-depth="0.10"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/molecule_front.png" alt=""></li>
+        <li class="layer bird" data-depth="0.6"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/bird.png" alt=""></li>
+        <li class="layer phoenix" data-depth="0.1"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/Logotype.png" alt=""></li>
         <li class="layer ashes" data-depth="0.1"><h1><?php echo $atts['title'] ?></h1></li>
-        <li class="clouds" data-depth="0.0"><img src="http://phoenix.local/wp-content/uploads/2020/09/clouds.png" alt=""></li>
+        <li class="clouds" data-depth="0.0"><img src="http://phoenixherbals.local/wp-content/uploads/2020/09/clouds.png" alt=""></li>
 		</ul>
 		
 		<?php return ob_get_clean();
@@ -363,3 +366,48 @@ function new_loop_shop_per_page( $cols ) {
 }
 
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+
+/**
+ * Display Name for Logged in User
+ */
+function rename_my_account( $title, $id = null ) {
+	if ( $title=='My account' and is_user_logged_in()) {
+		$current_user=wp_get_current_user();
+		$user = $current_user->display_name;
+		//var_dump($current_user);
+		return $title;
+	}
+	return $title;
+}
+add_filter( 'the_title', 'rename_my_account', 10, 2 );
+
+
+add_filter( 'wp_setup_nav_menu_item','my_item_setup' );
+function my_item_setup( $item ) {
+	if ( ! is_admin() && class_exists( 'woocommerce' ) ) {
+			if ( $item->url == esc_url( wc_get_cart_url() ) && ! WC()->cart->is_empty() ){
+					$title = 'CART';
+					$item->title = $title . ' (' .  WC()->cart->get_cart_contents_count() . ')';
+			}
+	}
+	return $item;
+}
+
+/**
+* Display cart count
+*/
+add_filter( 'woocommerce_add_to_cart_fragments', 'wc_refresh_cart_fragments', 50, 1 );
+function wc_refresh_cart_fragments( $fragments ){
+	$cart_count = WC()->cart->get_cart_contents_count();
+
+	// Normal version
+	$count_normal = '<span id="count-cart-items">' .  $cart_count . '</span>';
+	$fragments['#count-cart-items'] = $count_normal;
+
+	// Mobile version
+	$count_mobile = '<span id="count-cart-itemob">' .  $cart_count . '</span>';
+	$fragments['#count-cart-itemob'] = $count_mobile;
+
+	return $fragments;
+}

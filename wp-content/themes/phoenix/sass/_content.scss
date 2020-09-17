@@ -14,3 +14,13 @@ p, span {
 .register-p {
   margin-right: 100px !important;
 }
+
+p>a {
+  color: $link_footer !important;
+  text-decoration: none;
+
+  &:hover {
+    color: $link_footer_hover !important;
+    text-decoration: underline;
+  }
+}
