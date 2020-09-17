@@ -13,7 +13,7 @@
 	<?php
     $enable_vc = get_post_meta(get_the_ID(), '_wpb_vc_js_status', true);
     ?>
-	<?php if(!is_front_page()) : ?>
+	<?php if(!is_front_page() && !is_page( 'catalog' )) : ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title-custom">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

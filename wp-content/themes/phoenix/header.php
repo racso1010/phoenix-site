@@ -66,11 +66,20 @@
     </header><!-- #masthead -->
 
     <?php if(is_front_page()) : ?>
-	<div id="content" class="site-content-fluid">
-        <div class="container-fluid">
-        <?php else : ?>
-	<div id="content" class="site-content">
-		<div class="container">
-        <?php endif; ?>
-                <?php endif; ?>
-			<div class="row">
+        <div id="content" class="site-content-fluid">
+            <div class="container-fluid">
+
+    <?php elseif(is_shop()) : ?>
+        <div id="content" class="site-content">
+            <div class="container-fluid p-0">
+                <?php echo do_shortcode('[metaslider id="272"]'); ?>
+            </div>
+        </div>
+        <div id="content" class="site-content-fluid">
+		    <div class="container">
+    <?php else : ?>
+        <div id="content" class="site-content">
+            <div class="container">
+    <?php endif; ?>
+    <?php endif; ?>
+                <div class="row">

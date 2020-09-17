@@ -239,3 +239,29 @@
         }
     }
 }
+.slider-store {
+    
+    .flex-direction-nav {
+        .flex-prev {
+            left: 5px;
+            opacity: 1 !important;     
+        }
+        
+        .flex-next {
+            right: 5px;
+            opacity: 1 !important;
+        }
+    }
+
+}
+
+.entry-content {
+    h2 {
+        font-family: $font_harabara;
+        color: $white;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: .15em;
+        margin: 0;
+    }
+}

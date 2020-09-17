@@ -1,6 +1,15 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "harabara_maisharabaramaisdemo", sans-serif; }
 
+h1.page-title,
+h1.entry-title-custom {
+  font-family: "harabara_maisharabaramaisdemo", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: .15em;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
 header#masthead {
   background-color: #24202a;
   padding: 0px !important; }
@@ -295,6 +304,21 @@ header#masthead {
     .woocommerce-store li.product .price span {
       font-size: 16px;
       font-weight: 400; }
+
+.slider-store .flex-direction-nav .flex-prev {
+  left: 5px;
+  opacity: 1 !important; }
+.slider-store .flex-direction-nav .flex-next {
+  right: 5px;
+  opacity: 1 !important; }
+
+.entry-content h2 {
+  font-family: "harabara_maisharabaramaisdemo", sans-serif;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: .15em;
+  margin: 0; }
 
 body {
   color: #fff !important; }
