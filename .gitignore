@@ -30,4 +30,4 @@
 # and "themes" directories.
 wp-content/*
 !wp-content/plugins/
-!wp-content/themes/phoenix
+!wp-content/themes/
