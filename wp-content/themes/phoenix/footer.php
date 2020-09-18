@@ -14,10 +14,6 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- #content -->
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e9e4f202df9faa66f21a847d39ba37afa8a5475
     <?php get_template_part( 'footer-widget' ); ?>
 	<footer id="colophon" class="site-footer bg-transparent" role="contentinfo">
 		<div class="container pt-1 pb-4">
