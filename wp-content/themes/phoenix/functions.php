@@ -375,7 +375,7 @@ add_filter( 'wp_nav_menu_objects', 'my_custom_menu_item');
 function my_custom_menu_item($items) {
     $remove_childs_of = array();
     foreach($items as $index => $item) {
-        if($item->title == "##currentuser##") {
+        if($item->title == "My account") {
             if(is_user_logged_in()) {
                 $user=wp_get_current_user();
                 $name=$user->first_name . ' ' . $user->last_name; // or user_login , user_firstname, user_lastname
