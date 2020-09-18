@@ -36,10 +36,11 @@ header#masthead {
     font-size: 12px;
     font-weight: 900;
     content: '\f007 '; }
-  .navbar #main-nav .navbar-nav a[title*="CART"] {
+  .navbar #main-nav .navbar-nav a[title^="CART"]:before {
+    font-family: "Font Awesome 5 Free";
     font-size: 12px;
     font-weight: 900;
-    content: '\f07a '; }
+    content: '\f07a'; }
 .navbar .navbar-right li a {
   text-transform: capitalize;
   color: #fff !important; }

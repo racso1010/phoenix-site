@@ -378,7 +378,7 @@ function my_custom_menu_item($items) {
         if($item->title == "##currentuser##") {
             if(is_user_logged_in()) {
                 $user=wp_get_current_user();
-                $name=$user->display_name; // or user_login , user_firstname, user_lastname
+                $name=$user->first_name . ' ' . $user->last_name; // or user_login , user_firstname, user_lastname
                 $items[$index]->title = $name;
             }
             else {
