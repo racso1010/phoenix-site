@@ -264,7 +264,7 @@
                 background-color: $white !important;
                 border: 2px solid $phoenix;
                 }
-            }    
+            }
         }
     }
 }
@@ -298,6 +298,46 @@
 // Woocommerce - Cart
 
 .woocommerce {
+    .woocommerce-info {
+        border: solid $white;
+        color: $white;
+        background-color: transparent;
+         
+        &::before {
+            color: $white;
+        }
+
+        .showcoupon {
+            color: $link_footer;
+            
+            &:hover {
+                color: $link_footer_hover;
+                text-decoration: none;
+            }
+        }
+    
+    }
+    .return-to-shop {
+        .button {
+            text-align: center;
+            width: 200px;
+            margin: auto;
+            font-size: 14px;
+            color: $white !important;
+            background: $phoenix;
+            border: 2px solid $white;
+            border-radius: 0px;
+            text-transform: uppercase;
+            transition: .3s;
+
+            &:hover {
+                color: $phoenix !important;
+                background-color: $white !important;
+                border: 2px solid $phoenix;
+            }
+        }    
+    }
+
     .woocommerce-cart-form {
         .shop_table {
             th {
@@ -342,6 +382,70 @@
                     font-weight: bold;
                     letter-spacing: .15em;
                 }
+            }
+
+            .actions {
+                .coupon {
+                    .input-text {
+                        width: 200px !important;
+                        font-size: 12px;
+                        padding: 6px 12px;
+                        height: 34px;
+                        border: 1px solid #ccc;
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+                        &:focus {
+                            border-color: #66afe9;
+                            outline: 0;
+                            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+                            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+                        }
+                    }                    
+                }
+
+                .button {
+                    text-align: center;
+                    width: 200px;
+                    margin: auto;
+                    font-size: 14px;
+                    color: $white !important;
+                    background: $phoenix;
+                    border: 2px solid $white;
+                    border-radius: 0px;
+                    text-transform: uppercase;
+                    transition: .3s;
+        
+                    &:hover {
+                        color: $phoenix !important;
+                        background-color: $white !important;
+                        border: 2px solid $phoenix;
+                    }
+                } 
+            }
+        }
+        
+    }
+
+    .cart_totals {
+        .button {
+            text-align: center;
+            margin: auto;
+            font-size: 14px;
+            color: $white !important;
+            background: $phoenix !important;
+            border: 2px solid $white;
+            border-radius: 0px;
+            text-transform: uppercase;
+            transition: .3s;
+    
+            &:hover {
+                color: $phoenix !important;
+                background-color: $white !important;
+                border: 2px solid $phoenix;
             }
         }
     }
