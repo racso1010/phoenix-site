@@ -1,0 +1,35 @@
+.woocommerce-MyAccount-navigation {
+  & > ul {
+    list-style: none;
+    padding: 0px;
+
+    a {
+      color: $link_footer;
+      font-family: $font_harabara;
+      font-size: 16px !important;
+      font-weight: bold;
+      line-height: 2em !important;
+      letter-spacing: .15em;
+
+      &:hover {
+          text-decoration: none;
+          color: $link_footer_hover;
+      }
+    }
+  }
+}
+
+.woocommerce-EditAccountForm {
+  fieldset {
+    border: 1px solid $white;
+    padding: 5px;
+
+    legend {
+      display: none;
+    }
+
+    input {
+      height: 2.8em !important;
+    }
+  }
+}
