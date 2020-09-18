@@ -42,10 +42,13 @@ header#masthead {
                 }
             }
 
-            a[title*="CART"] {
-                font-size: 12px;
-                font-weight: 900; 
-                content: '\f07a ';
+            a[title^="CART"] {
+                &:before {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-size: 12px;
+                    font-weight: 900; 
+                    content: '\f07a';
+                }
             }
         }
     }
