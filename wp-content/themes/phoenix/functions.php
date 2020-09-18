@@ -326,9 +326,31 @@ function phoenix_admin_address_field( $admin_fields ) {
  
 	// or $admin_fields['shipping']['fields']['shipping_fav_color']
 	// or both
- 
 	return $admin_fields;
+}
 
+add_action( 'woocommerce_save_account_details', 'phoenix_save_billing_fields' );
+function phoenix_save_billing_fields( $customer_id ) {
+	if ( isset( $_POST['account_billing_phone'] ) ) {
+		// Phone input filed which is used in WooCommerce
+		update_user_meta( $customer_id, 'billing_phone', sanitize_text_field( $_POST['account_billing_phone'] ) );
+	}
+	if ( isset( $_POST['account_billing_address_1'] ) ) {
+		// Phone input filed which is used in WooCommerce
+		update_user_meta( $customer_id, 'billing_address_1', sanitize_text_field( $_POST['account_billing_address_1'] ) );
+	}
+	if ( isset( $_POST['account_billing_company'] ) ) {
+		// Phone input filed which is used in WooCommerce
+		update_user_meta( $customer_id, 'billing_company', sanitize_text_field( $_POST['account_billing_company'] ) );
+	}
+	if ( isset( $_POST['account_billing_reseller_lic'] ) ) {
+		// Phone input filed which is used in WooCommerce
+		update_user_meta( $customer_id, 'billing_reseller_lic', sanitize_text_field( $_POST['account_billing_reseller_lic'] ) );
+	}
+	if ( isset( $_POST['account_billing_state'] ) ) {
+		// Phone input filed which is used in WooCommerce
+		update_user_meta( $customer_id, 'billing_state', sanitize_text_field( $_POST['account_billing_state'] ) );
+	}
 }
 
 // function woocommerce_edit_my_account_page() {

@@ -20,16 +20,17 @@
 }
 
 .woocommerce-EditAccountForm {
+  input {
+    height: 1.8em !important;
+  }
+
   fieldset {
+    margin-top: 30px;
     border: 1px solid $white;
     padding: 5px;
 
     legend {
       display: none;
-    }
-
-    input {
-      height: 2.8em !important;
     }
   }
 }

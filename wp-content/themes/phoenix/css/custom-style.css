@@ -546,10 +546,11 @@ p > a {
       text-decoration: none;
       color: #289abc; }
 
+.woocommerce-EditAccountForm input {
+  height: 1.8em !important; }
 .woocommerce-EditAccountForm fieldset {
+  margin-top: 30px;
   border: 1px solid #fff;
   padding: 5px; }
   .woocommerce-EditAccountForm fieldset legend {
     display: none; }
-  .woocommerce-EditAccountForm fieldset input {
-    height: 2.8em !important; }
