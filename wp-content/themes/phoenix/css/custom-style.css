@@ -36,10 +36,11 @@ header#masthead {
     font-size: 12px;
     font-weight: 900;
     content: '\f007 '; }
-  .navbar #main-nav .navbar-nav a[title*="CART"] {
+  .navbar #main-nav .navbar-nav a[title^="CART"]:before {
+    font-family: "Font Awesome 5 Free";
     font-size: 12px;
     font-weight: 900;
-    content: '\f07a '; }
+    content: '\f07a'; }
 .navbar .navbar-right li a {
   text-transform: capitalize;
   color: #fff !important; }
@@ -261,13 +262,9 @@ header#masthead {
 
 .woocommerce-store .woocommerce-result-count,
 .woocommerce-store .woocommerce-ordering,
-.woocommerce-store .onsale,
-.content-area .woocommerce-result-count,
-.content-area .woocommerce-ordering,
-.content-area .onsale {
+.woocommerce-store .onsale {
   display: none; }
-.woocommerce-store .woocommerce-loop-product__title,
-.content-area .woocommerce-loop-product__title {
+.woocommerce-store .woocommerce-loop-product__title {
   color: #91daf0;
   padding: 20px 0 10px 0 !important;
   text-align: center;
@@ -277,15 +274,12 @@ header#masthead {
   font-weight: bold;
   line-height: 1.1;
   min-height: 100px; }
-  .woocommerce-store .woocommerce-loop-product__title:hover,
-  .content-area .woocommerce-loop-product__title:hover {
+  .woocommerce-store .woocommerce-loop-product__title:hover {
     color: #289abc; }
-.woocommerce-store li.product,
-.content-area li.product {
+.woocommerce-store li.product {
   display: flex;
   flex-direction: column; }
-  .woocommerce-store li.product .button,
-  .content-area li.product .button {
+  .woocommerce-store li.product .button {
     text-align: center;
     width: 200px;
     margin: auto;
@@ -297,17 +291,14 @@ header#masthead {
     border-radius: 0px;
     text-transform: uppercase;
     transition: .3s; }
-    .woocommerce-store li.product .button:hover,
-    .content-area li.product .button:hover {
+    .woocommerce-store li.product .button:hover {
       color: #24202a !important;
       background-color: #fff !important;
       border: 2px solid #24202a; }
-  .woocommerce-store li.product .price,
-  .content-area li.product .price {
+  .woocommerce-store li.product .price {
     text-align: center;
     color: #fff !important; }
-    .woocommerce-store li.product .price span,
-    .content-area li.product .price span {
+    .woocommerce-store li.product .price span {
       font-size: 16px;
       font-weight: 400; }
 .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message,
