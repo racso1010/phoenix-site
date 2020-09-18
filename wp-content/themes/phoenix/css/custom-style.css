@@ -362,6 +362,11 @@ header#masthead {
   font-weight: bold;
   letter-spacing: .15em;
   margin: 0; }
+.entry-content h3 {
+  font-family: "harabara_maisharabaramaisdemo", sans-serif;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold; }
 
 .woocommerce .woocommerce-info {
   border: solid #fff;
