@@ -371,22 +371,34 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 /**
  * Display Name for Logged in User
  */
-function rename_my_account( $title, $id = null ) {
-	if ( $title=='My account' and is_user_logged_in()) {
-		$current_user=wp_get_current_user();
-		$user = $current_user->display_name;
-		//var_dump($current_user);
-		return $title;
-	}
-	return $title;
+add_filter( 'wp_nav_menu_objects', 'my_custom_menu_item');
+function my_custom_menu_item($items) {
+    $remove_childs_of = array();
+    foreach($items as $index => $item) {
+        if($item->title == "##currentuser##") {
+            if(is_user_logged_in()) {
+                $user=wp_get_current_user();
+                $name=$user->display_name; // or user_login , user_firstname, user_lastname
+                $items[$index]->title = $name;
+            }
+            else {
+                array_push($remove_childs_of, $item->ID);
+                unset($items[$index]);
+            }
+        }
+        if(!empty($remove_childs_of) && in_array($item->menu_item_parent, $remove_childs_of)) {
+            array_push($remove_childs_of, $item->ID);
+            unset($items[$index]);
+        }
+    }
+    return $items;
 }
-add_filter( 'the_title', 'rename_my_account', 10, 2 );
 
 
 add_filter( 'wp_setup_nav_menu_item','my_item_setup' );
 function my_item_setup( $item ) {
 	if ( ! is_admin() && class_exists( 'woocommerce' ) ) {
-			if ( $item->url == esc_url( wc_get_cart_url() ) && ! WC()->cart->is_empty() ){
+			if ( $item->url == esc_url( wc_get_cart_url() )){
 					$title = 'CART';
 					$item->title = $title . ' (' .  WC()->cart->get_cart_contents_count() . ')';
 			}
