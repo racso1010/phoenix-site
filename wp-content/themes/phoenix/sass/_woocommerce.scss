@@ -529,6 +529,21 @@
             }
         }
     }
+
+    .woocommerce-table--order-details {
+        .woocommerce-table__product-name {
+            a {
+                color: $link_footer;
+                font-family: $font_harabara;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $link_footer_hover;
+                }
+            }
+        }
+    }
 }
 
 .select2-results {

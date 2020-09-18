@@ -510,6 +510,13 @@ header#masthead {
         color: #24202a !important;
         background-color: #fff !important;
         border: 2px solid #24202a; }
+.woocommerce .woocommerce-table--order-details .woocommerce-table__product-name a {
+  color: #91daf0;
+  font-family: "harabara_maisharabaramaisdemo", sans-serif;
+  font-weight: bold; }
+  .woocommerce .woocommerce-table--order-details .woocommerce-table__product-name a:hover {
+    text-decoration: none;
+    color: #289abc; }
 
 .select2-results .select2-results__option {
   color: #000 !important; }
