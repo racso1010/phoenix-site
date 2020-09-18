@@ -423,3 +423,8 @@ function wc_refresh_cart_fragments( $fragments ){
 
 	return $fragments;
 }
+
+/**
+ * Prevent automatic log in after registration
+ */
+add_filter( 'woocommerce_registration_auth_new_customer', '__return_false' );
