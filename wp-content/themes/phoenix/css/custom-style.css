@@ -481,6 +481,30 @@ header#masthead {
     width: auto; }
     .woocommerce .woocommerce-checkout .form-row .control-label {
       min-width: 20rem; }
+    .woocommerce .woocommerce-checkout .form-row .woocommerce-input-wrapper {
+      width: 200px; }
+  .woocommerce .woocommerce-checkout .woocommerce-checkout-payment {
+    background: transparent !important; }
+    .woocommerce .woocommerce-checkout .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-link {
+      color: #91daf0;
+      font-family: "harabara_maisharabaramaisdemo", sans-serif;
+      font-weight: bold; }
+      .woocommerce .woocommerce-checkout .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-link:hover {
+        text-decoration: none;
+        color: #289abc; }
+    .woocommerce .woocommerce-checkout .woocommerce-checkout-payment .place-order .button {
+      text-align: center;
+      font-size: 14px;
+      color: #fff !important;
+      background: #24202a !important;
+      border: 2px solid #fff;
+      border-radius: 0px;
+      text-transform: uppercase;
+      transition: .3s; }
+      .woocommerce .woocommerce-checkout .woocommerce-checkout-payment .place-order .button:hover {
+        color: #24202a !important;
+        background-color: #fff !important;
+        border: 2px solid #24202a; }
 
 .select2-results .select2-results__option {
   color: #000 !important; }
