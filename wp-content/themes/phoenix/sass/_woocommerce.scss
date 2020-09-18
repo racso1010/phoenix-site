@@ -2,12 +2,9 @@
 
 .custom-woocommerce-image {
     ol.flex-control-thumbs {
-        display: flex;
-        flex-direction: column;
-        zoom: 1.5 !important;
 
         li {
-            width: 100% !important;
+            width: 80% !important;
             margin-bottom: 20px !important;
         }
     }
@@ -239,6 +236,37 @@
             }
         }
     }
+    // Messages
+    .woocommerce-notices-wrapper {
+        .woocommerce-message {
+            background-color: transparent;
+            border: solid $white;
+            color: $white;
+
+            &::before {
+                color: $white;
+            }
+
+            .button {
+                text-align: center;
+                width: 200px;
+                margin: auto;
+                font-size: 14px;
+                color: $white !important;
+                background: $phoenix;
+                border: 2px solid $white;
+                border-radius: 0px;
+                text-transform: uppercase;
+                transition: .3s;
+    
+                &:hover {
+                color: $phoenix !important;
+                background-color: $white !important;
+                border: 2px solid $phoenix;
+                }
+            }    
+        }
+    }
 }
 .slider-store {
     
@@ -264,5 +292,57 @@
         font-weight: bold;
         letter-spacing: .15em;
         margin: 0;
+    }
+}
+
+// Woocommerce - Cart
+
+.woocommerce {
+    .woocommerce-cart-form {
+        .shop_table {
+            th {
+                font-family: $font_harabara;
+                font-weight: bold;
+            }
+
+            .product-thumbnail {
+                img {
+                    width: 100px;
+                }
+            }
+
+            .remove {
+                color: $white !important;
+
+                &:hover {
+                    color: $black !important;
+                    background: $white;
+                }
+            }
+
+            .product-name {
+                a {
+                    color: $link_footer;
+                    font-family: $font_harabara;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: .15em;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $link_footer_hover;
+                    }
+                }
+            } 
+
+            .product-subtotal {
+                span {
+                    font-family: $font_harabara;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: .15em;
+                }
+            }
+        }
     }
 }
