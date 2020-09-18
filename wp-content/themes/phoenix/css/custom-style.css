@@ -318,16 +318,19 @@ header#masthead {
     .content-area li.product .price span {
       font-size: 16px;
       font-weight: 400; }
-.woocommerce-store .woocommerce-notices-wrapper .woocommerce-message,
-.content-area .woocommerce-notices-wrapper .woocommerce-message {
+.woocommerce-store .woocommerce-notices-wrapper .woocommerce-message, .woocommerce-store .woocommerce-notices-wrapper .woocommerce-error,
+.content-area .woocommerce-notices-wrapper .woocommerce-message,
+.content-area .woocommerce-notices-wrapper .woocommerce-error {
   background-color: transparent;
   border: solid #fff;
   color: #fff; }
-  .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message::before,
-  .content-area .woocommerce-notices-wrapper .woocommerce-message::before {
+  .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message::before, .woocommerce-store .woocommerce-notices-wrapper .woocommerce-error::before,
+  .content-area .woocommerce-notices-wrapper .woocommerce-message::before,
+  .content-area .woocommerce-notices-wrapper .woocommerce-error::before {
     color: #fff; }
-  .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message .button,
-  .content-area .woocommerce-notices-wrapper .woocommerce-message .button {
+  .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message .button, .woocommerce-store .woocommerce-notices-wrapper .woocommerce-error .button,
+  .content-area .woocommerce-notices-wrapper .woocommerce-message .button,
+  .content-area .woocommerce-notices-wrapper .woocommerce-error .button {
     text-align: center;
     width: 200px;
     margin: auto;
@@ -338,8 +341,9 @@ header#masthead {
     border-radius: 0px;
     text-transform: uppercase;
     transition: .3s; }
-    .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message .button:hover,
-    .content-area .woocommerce-notices-wrapper .woocommerce-message .button:hover {
+    .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message .button:hover, .woocommerce-store .woocommerce-notices-wrapper .woocommerce-error .button:hover,
+    .content-area .woocommerce-notices-wrapper .woocommerce-message .button:hover,
+    .content-area .woocommerce-notices-wrapper .woocommerce-error .button:hover {
       color: #24202a !important;
       background-color: #fff !important;
       border: 2px solid #24202a; }

@@ -238,7 +238,7 @@
     }
     // Messages
     .woocommerce-notices-wrapper {
-        .woocommerce-message {
+        .woocommerce-message, .woocommerce-error {
             background-color: transparent;
             border: solid $white;
             color: $white;
