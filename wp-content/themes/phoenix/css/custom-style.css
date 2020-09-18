@@ -601,6 +601,27 @@ p > a {
       background-color: #24202a;
       padding: .5rem;
       min-width: 18rem; } }
+@media (max-width: 768px) {
+  .woocommerce-store .product .custom-woocommerce-image .flex-control-thumbs,
+  .content-area .product .custom-woocommerce-image .flex-control-thumbs {
+    display: none; }
+  .woocommerce-store .product .custom-woocommerce-sumary,
+  .content-area .product .custom-woocommerce-sumary {
+    padding: 0 3em; }
+  .woocommerce-store ul.products li.product,
+  .content-area ul.products li.product {
+    width: 100% !important; }
+
+  .woocommerce .woocommerce-cart-form .shop_table .actions .coupon .input-text {
+    width: 50% !important; }
+  .woocommerce .woocommerce-cart-form .shop_table tr.woocommerce-cart-form__cart-item {
+    border-bottom: 2px solid #fff; }
+
+  .woocommerce-store .page-title {
+    padding-left: 3rem; }
+
+  .entry-content h2 {
+    font-size: 25px; } }
 .woocommerce-MyAccount-navigation > ul {
   list-style: none;
   padding: 0px; }
