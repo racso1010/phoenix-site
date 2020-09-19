@@ -1,4 +1,5 @@
 $breakpoint-desktop: 1200px;
+$breakpoint-mobile: 768px;
 
 @media (min-width: $breakpoint-desktop) {
   header#masthead {
@@ -38,3 +39,63 @@ $breakpoint-desktop: 1200px;
     }
   }
 }
+
+
+@media (max-width: $breakpoint-mobile) {
+  .woocommerce-store,
+  .content-area {
+    .product {
+      .custom-woocommerce-image {
+        .flex-control-thumbs {
+          display: none;
+        }
+      }
+
+      .custom-woocommerce-sumary {
+        padding: 0 3em;
+      }
+    }
+
+    ul.products {
+      li.product {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .woocommerce {
+    .woocommerce-cart-form {
+      .shop_table {
+        .actions {
+          .coupon {
+            .input-text {
+              width: 50% !important;
+            }
+          }
+        }
+
+        tr.woocommerce-cart-form__cart-item {
+          border-bottom: 2px solid $white;;
+        }
+      }
+    }
+  }
+
+  .woocommerce-store {
+    .page-title {
+      padding-left: 3rem;
+    }
+  }
+
+  .entry-content {
+    h2 {
+      font-size: 25px;
+    }
+  }
+  .ashes{
+    h1{
+      font-size: 1.2em;
+    }
+  }
+}
+
