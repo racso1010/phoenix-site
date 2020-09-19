@@ -347,6 +347,7 @@ header#masthead {
       color: #24202a !important;
       background-color: #fff !important;
       border: 2px solid #24202a; }
+<<<<<<< HEAD
   .woocommerce-store .woocommerce-notices-wrapper .woocommerce-message a, .woocommerce-store .woocommerce-notices-wrapper .woocommerce-error a,
   .content-area .woocommerce-notices-wrapper .woocommerce-message a,
   .content-area .woocommerce-notices-wrapper .woocommerce-error a {
@@ -358,6 +359,8 @@ header#masthead {
     .content-area .woocommerce-notices-wrapper .woocommerce-error a:hover {
       text-decoration: none;
       color: #289abc; }
+=======
+>>>>>>> cd6a5c5af2cabed1b8acc0f0721b64a0ab652c14
 
 .slider-store .flex-direction-nav .flex-prev {
   left: 5px;
@@ -632,10 +635,14 @@ p > a {
     padding-left: 3rem; }
 
   .entry-content h2 {
+<<<<<<< HEAD
     font-size: 25px; }
 
   .ashes h1 {
     font-size: 1.2em; } }
+=======
+    font-size: 25px; } }
+>>>>>>> cd6a5c5af2cabed1b8acc0f0721b64a0ab652c14
 .woocommerce-MyAccount-navigation > ul {
   list-style: none;
   padding: 0px; }
